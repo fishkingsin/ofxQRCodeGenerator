@@ -4,7 +4,7 @@
 
 #include "ofxQRCodeGenerator.h"
 
-class testApp : public ofBaseApp{
+class ofApp : public ofBaseApp{
 
 	public:
 		void setup();
@@ -25,5 +25,6 @@ class testApp : public ofBaseApp{
         ofImage            rcQRCode;
         ofImage            labQRCode;
         ofImage            OFQRCode;
+        ofImage            longQRCode;
 		
 };

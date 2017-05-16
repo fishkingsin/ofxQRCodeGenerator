@@ -1,67 +1,69 @@
-#include "testApp.h"
+#include "ofApp.h"
 
 //--------------------------------------------------------------
-void testApp::setup(){
+void ofApp::setup(){
     rcQRCode = qrCodeGenerator.generate( "http://www.robotconscience.com", 250 );
     OFQRCode = qrCodeGenerator.generate( "http://www.openframeworks.cc", 250 );
     labQRCode = qrCodeGenerator.generate( "http://rockwellgroup.com/lab-notes", 250 );
+    longQRCode  = qrCodeGenerator.generate( "https://open.weixin.qq.com/connect/oauth2authorize?/appid=wxaaa8b1e278a9120d&redirect_uri=https%3A%2F%2Fwww.ampmore.com%2Fshkp%2Fwechat%2FfollowerChecking%3Fuid%3D3337dQGrS58&response_type=code&scope=snsapi_base&state=auth#wechat_redirect", 250 );
 }
 
 //--------------------------------------------------------------
-void testApp::update(){
+void ofApp::update(){
 
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
+void ofApp::draw(){
     ofSetColor(255);
     ofSetRectMode( OF_RECTMODE_CENTER ); // center the image
     rcQRCode.draw(ofGetWidth()/2 - 300,ofGetHeight()/2);
     OFQRCode.draw(ofGetWidth()/2,ofGetHeight()/2); // draw smack in the middle
-    labQRCode.draw(ofGetWidth()/2 + 300,ofGetHeight()/2); 
+    labQRCode.draw(ofGetWidth()/2 + 300,ofGetHeight()/2);
+    longQRCode.draw(ofGetWidth()/2 + 300,ofGetHeight()/2+300 , 250, 250);
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void testApp::keyReleased(int key){
+void ofApp::keyPressed(int key){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
+void ofApp::keyReleased(int key){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
+void ofApp::mouseMoved(int x, int y ){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
+void ofApp::mouseDragged(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button){
+void ofApp::mousePressed(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
+void ofApp::mouseReleased(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::gotMessage(ofMessage msg){
+void ofApp::windowResized(int w, int h){
 
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::gotMessage(ofMessage msg){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
 }
