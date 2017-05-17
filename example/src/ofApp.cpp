@@ -17,10 +17,10 @@ void ofApp::update(){
 void ofApp::draw(){
     ofSetColor(255);
     ofSetRectMode( OF_RECTMODE_CENTER ); // center the image
-    rcQRCode.draw(ofGetWidth()/2 - 300,ofGetHeight()/2);
-    OFQRCode.draw(ofGetWidth()/2,ofGetHeight()/2); // draw smack in the middle
-    labQRCode.draw(ofGetWidth()/2 + 300,ofGetHeight()/2);
-    longQRCode.draw(ofGetWidth()/2 + 300,ofGetHeight()/2+300 , 250, 250);
+    rcQRCode.draw(ofGetWidth()/2 - 300,ofGetHeight()/2-150);
+    OFQRCode.draw(ofGetWidth()/2,ofGetHeight()/2-150); // draw smack in the middle
+    labQRCode.draw(ofGetWidth()/2 + 300,ofGetHeight()/2-150);
+    longQRCode.draw(ofGetWidth()/2 + 300,ofGetHeight()/2+150 , 250, 250);
 }
 
 //--------------------------------------------------------------
